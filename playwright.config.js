@@ -11,7 +11,10 @@ module.exports = defineConfig({
   fullyParallel: false,
   workers: 1,
 
-  reporter: 'list',
+  reporter: [
+  ['list'],
+  ['html', { outputFolder: 'playwright-report', open: 'never' }]
+],
 
   use: {
     headless: true,
