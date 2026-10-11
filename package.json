@@ -1,0 +1,25 @@
+{
+  "name": "e-kart-qa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+  "test": "playwright test"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sks1991/E-Kart-QA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Sks1991/E-Kart-QA/issues"
+  },
+  "homepage": "https://github.com/Sks1991/E-Kart-QA#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.64.0"
+  }
+}
