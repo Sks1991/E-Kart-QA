@@ -22,11 +22,12 @@ pipeline {
             }
         }
 
-        stage('Run Playwright Tests') {
-            steps {
-                bat 'npm.cmd test'
-            }
-        }
+        stage('Run Playwright UI and API Tests') {
+    steps {
+        bat 'npm.cmd test'
+    }
+}
+
     }
 
     post {
