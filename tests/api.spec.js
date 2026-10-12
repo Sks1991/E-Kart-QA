@@ -34,3 +34,31 @@ test('POST API should create a new post', async ({ request }) => {
   expect(data.userId).toBe(1);
   expect(data.id).toBeTruthy();
 });
+
+test('PUT API should update a post', async ({ request }) => {
+  const response = await request.put(
+    'https://jsonplaceholder.typicode.com/posts/1',
+    {
+      data: {
+        id: 1,
+        title: 'Updated E-Kart Product',
+        body: 'Updated product details',
+        userId: 1,
+      },
+    }
+  );
+
+  expect(response.status()).toBe(200);
+
+  const data = await response.json();
+  expect(data.title).toBe('Updated E-Kart Product');
+  expect(data.id).toBe(1);
+});
+
+test('DELETE API should delete a post', async ({ request }) => {
+  const response = await request.delete(
+    'https://jsonplaceholder.typicode.com/posts/1'
+  );
+
+  expect(response.status()).toBe(200);
+});
