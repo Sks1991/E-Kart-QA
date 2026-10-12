@@ -23,9 +23,18 @@ pipeline {
         }
 
         stage('Run Playwright UI and API Tests') {
+    stage('Run UI, API and Database Tests') {
     steps {
-        bat 'npm.cmd test'
+        withCredentials([
+            string(
+                credentialsId: 'mysql-db-password',
+                variable: 'DB_PASSWORD'
+            )
+        ]) {
+            bat 'npm.cmd test'
+        }
     }
+}
 }
 
     }
