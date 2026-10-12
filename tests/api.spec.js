@@ -1,7 +1,11 @@
 const { test, expect } = require('@playwright/test');
 
 test('API should return a successful response', async ({ request }) => {
-  const response = await request.get('https://jsonplaceholder.typicode.com/posts/1');
+ const startTime = Date.now();
+const response = await request.get('https://jsonplaceholder.typicode.com/posts/1');
+const responseTime = Date.now() - startTime;
+
+expect(responseTime).toBeLessThan(3000);
 
   expect(response.status()).toBe(200);
 
