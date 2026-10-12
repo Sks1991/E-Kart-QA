@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
-"scripts": {
-  "test": "playwright test",
-  "cy:open": "cypress open",
-  "cy:run": "cypress run"
-},
+  "scripts": {
+    "test": "playwright test",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sks1991/E-Kart-QA.git"
@@ -22,7 +22,8 @@
   "homepage": "https://github.com/Sks1991/E-Kart-QA#readme",
   "devDependencies": {
     "@playwright/test": "^1.64.0",
-    "cypress": "^16.1.1"
+    "cypress": "^16.1.1",
+    "cypress-mochawesome-reporter": "^5.0.0"
   },
   "dependencies": {
     "mysql2": "^3.24.5"
