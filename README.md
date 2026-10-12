@@ -1,58 +1,46 @@
-E-Kart-QA — E-Commerce QA Automation
+E-Kart-QA — QA Automation Framework
 
-A hands-on QA automation project demonstrating UI testing, API testing, MySQL database validation, and CI/CD integration using Jenkins.
+A hands-on Quality Assurance automation project demonstrating UI automation, API testing, database validation, and CI/CD integration using modern testing tools.
+
+Project Overview
+
+E-Kart-QA is a sample e-commerce application used to practice and demonstrate software testing skills. The project integrates automated test execution with Jenkins and publishes HTML test reports for reviewing results.
 
 Tech Stack
 
-Language: JavaScript
-
-UI Automation: Playwright
+UI Automation: Playwright, Cypress
 
 API Testing: Playwright API testing
 
 Database Testing: MySQL
 
+Programming Language: JavaScript
+
+Runtime: Node.js
+
 CI/CD: Jenkins
 
 Version Control: Git and GitHub
 
-Test Reporting: Playwright HTML Report
+Reporting: Playwright HTML Report, Cypress Mochawesome HTML Report
 
-Project Features
+Key Features
 
-Automated UI tests for homepage loading and product search.
+Automated homepage validation
 
-API tests covering GET, POST, PUT, DELETE, response status, headers, and error responses.
+Product search testing for valid and invalid queries
 
-MySQL database validation for product records, prices, and stock.
+API endpoint validation using automated tests
 
-Jenkins pipeline to execute automated tests.
+Database validation using MySQL
 
-Playwright HTML report publishing and test artifact archiving.
+Cypress end-to-end browser testing
 
-Test Coverage
+Jenkins pipeline for automated test execution
 
-Test Suite
+HTML reports for reviewing test results
 
-Tests
-
-UI Automation
-
-3
-
-API Testing
-
-5
-
-MySQL Database Testing
-
-1
-
-Total
-
-9
-
-Latest verified result: 9 tests passed, 0 failed.
+GitHub integration for source control and version tracking
 
 Project Structure
 
@@ -61,10 +49,17 @@ E-Kart-QA/
 │   ├── homepage.spec.js
 │   ├── api.spec.js
 │   └── database.spec.js
+├── cypress/
+│   ├── e2e/
+│   │   └── homepage.cy.js
+│   ├── fixtures/
+│   ├── support/
+│   └── reports/
 ├── index.html
 ├── style.css
 ├── script.js
 ├── playwright.config.js
+├── cypress.config.js
 ├── Jenkinsfile
 ├── package.json
 ├── package-lock.json
@@ -76,13 +71,13 @@ Node.js and npm
 
 Git
 
-Java and Jenkins
+Java JDK for Jenkins
 
-MySQL Server
+Jenkins with the required plugins and credentials
 
-VS Code (recommended)
+MySQL configured for database tests
 
-Run Tests Locally
+Installation
 
 Clone the repository:
 
@@ -91,34 +86,102 @@ cd E-Kart-QA
 
 Install dependencies:
 
-npm ci
+npm install
 
 Install the Playwright Chromium browser:
 
 npx playwright install chromium
 
-Configure the MySQL database and required credentials according to the project setup.
+Running Tests
 
-Run the test suite:
+Playwright tests
 
 npm test
 
-Jenkins CI/CD
+Cypress interactive mode
 
-The Jenkinsfile defines a pipeline that checks out the source code, installs dependencies, runs automated tests, and archives test artifacts. The pipeline also publishes the Playwright HTML report when the required Jenkins plugins and configuration are available.
+npm run cy:open
 
-Future Enhancements
+Cypress headless mode
 
-Add Cypress automation.
+npm run cy:run
 
-Expand API and database test coverage.
+Test Coverage
 
-Integrate performance testing.
+Testing Area
 
-Extend CI/CD reporting and quality checks.
+Coverage
+
+UI Automation
+
+Homepage and product search
+
+API Testing
+
+Automated API validations
+
+Database Testing
+
+MySQL data validation
+
+Cypress
+
+Homepage and product search
+
+CI/CD
+
+Jenkins pipeline execution
+
+Reporting
+
+Playwright and Cypress HTML reports
+
+Jenkins CI/CD Pipeline
+
+The Jenkins pipeline automates the following steps:
+
+Checkout source code from GitHub.
+
+Install project dependencies.
+
+Install the Playwright Chromium browser.
+
+Run Playwright UI, API, and database tests.
+
+Run Cypress end-to-end tests.
+
+Archive test artifacts.
+
+Publish Playwright and Cypress HTML reports.
+
+The pipeline uses a Jenkins credential for the database password instead of hardcoding the password in the repository.
+
+Test Reports
+
+After running the tests locally, the reports are generated in these locations:
+
+Playwright: playwright-report/index.html
+
+Cypress: cypress/reports/index.html
+
+Jenkins publishes the reports for review after a build.
+
+Project Goals
+
+Build practical UI automation skills.
+
+Practice API and database testing.
+
+Understand test automation framework configuration.
+
+Integrate automated tests into a CI/CD pipeline.
+
+Generate and publish test reports.
+
+Maintain a version-controlled QA portfolio project.
 
 Author
 
-QA Automation Practice Project — E-Kart-QA
+QA Automation Practice Project
 
-Repository: https://github.com/Sks1991/E-Kart-QA
+GitHub Repository: https://github.com/Sks1991/E-Kart-QA
