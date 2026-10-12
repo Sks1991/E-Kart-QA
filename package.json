@@ -4,8 +4,7 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-  "test": "playwright test"
-
+    "test": "playwright test"
   },
   "repository": {
     "type": "git",
@@ -21,5 +20,8 @@
   "homepage": "https://github.com/Sks1991/E-Kart-QA#readme",
   "devDependencies": {
     "@playwright/test": "^1.64.0"
+  },
+  "dependencies": {
+    "mysql2": "^3.24.5"
   }
 }
