@@ -29,6 +29,12 @@ pipeline {
         }
     }
 
+    stage('Run Cypress Tests') {
+    steps {
+        bat 'npm.cmd run cy:run'
+    }
+}
+
     post {
         always {
             archiveArtifacts(
