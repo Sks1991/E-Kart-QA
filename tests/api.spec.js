@@ -5,6 +5,9 @@ test('API should return a successful response', async ({ request }) => {
 
   expect(response.status()).toBe(200);
 
+  expect(response.headers()['content-type']).toContain('application/json');
+expect(response.ok()).toBeTruthy();
+
   const data = await response.json();
 
   expect(data.id).toBe(1);
