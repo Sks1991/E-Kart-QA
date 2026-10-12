@@ -62,3 +62,11 @@ test('DELETE API should delete a post', async ({ request }) => {
 
   expect(response.status()).toBe(200);
 });
+
+test('GET API should return an empty object for an invalid post ID', async ({ request }) => {
+  const response = await request.get(
+    'https://jsonplaceholder.typicode.com/posts/999999'
+  );
+
+  expect(response.status()).toBe(404);
+});
